@@ -22,7 +22,7 @@ public class ChipsController {
 
     }
 
-    @GetMapping("/id/{id}")
+    @GetMapping("/chip/{id}")
     public chip getChipById(@PathVariable String id)
     {
         chip result = chipRepository.findByRepoId(id);
