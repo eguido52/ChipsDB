@@ -10,8 +10,8 @@ public class chip{
     private String id;
     private String name;
     private String description;
-    private Double price;
-    private Integer stock;
+    private double price;
+    private int stock;
     private String imageUrl;
  
     public chip(String name, String description, Double price, Integer stock, String imageUrl){
@@ -27,25 +27,55 @@ public class chip{
     public String getId(){
         return this.id;
     }
-
     public String getDescription(){
         return this.description;
     }
-
     public String getName(){
         return this.name;
     }
-
+    public Double getPrice(){
+        return this.price;
+    }
     public Integer getStock(){
         return this.stock;
 
     }
-
-    public Double getPrice(){
-        return this.price;
-    }
-
     public String getImageUrl(){
         return this.imageUrl;
+    }
+
+    public void setId(String id){
+        this.id = id;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setDescription(String description){
+        this.description = description;
+    }
+    public void setPrice(Double price){
+        this.price = price;
+    }
+    public void setStock(Integer stock){
+        this.stock = stock;
+    }
+    public void setImageUrl(String imageUrl){
+        this.imageUrl = imageUrl;
+    }
+
+    public boolean isInStock(int amount)
+    {
+        if(this.stock>=amount)
+            return true;
+        return false;
+    }
+    public boolean canPurchase(int amount)
+    {
+        if(isInStock(amount))
+        {
+            this.stock-=amount;
+            return true;
+        }
+        return false;
     }
 }
