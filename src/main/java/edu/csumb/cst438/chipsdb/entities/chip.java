@@ -14,10 +14,8 @@ public class chip{
     private int stock;
     private String imageUrl;
  
-    public chip(String name, String description, Double price, Integer stock, String imageUrl){
-        //TODO: Correct names
+    public chip(String name, String description, double price, int stock, String imageUrl){
         this.name = name;
-        //TODO: add description
         this.description = description;
         this.price = price;
         this.stock = stock;
@@ -33,10 +31,10 @@ public class chip{
     public String getName(){
         return this.name;
     }
-    public Double getPrice(){
+    public double getPrice(){
         return this.price;
     }
-    public Integer getStock(){
+    public int getStock(){
         return this.stock;
 
     }
@@ -53,10 +51,10 @@ public class chip{
     public void setDescription(String description){
         this.description = description;
     }
-    public void setPrice(Double price){
+    public void setPrice(double price){
         this.price = price;
     }
-    public void setStock(Integer stock){
+    public void setStock(int stock){
         this.stock = stock;
     }
     public void setImageUrl(String imageUrl){
