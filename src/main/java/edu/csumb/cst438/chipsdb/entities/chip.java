@@ -1,5 +1,7 @@
 package edu.csumb.cst438.chipsdb.entities;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -12,9 +14,9 @@ public class chip{
     private String description;
     private double price;
     private int stock;
-    private String imageUrl;
+    private List<String> imageUrl;
  
-    public chip(String name, String description, Double price, Integer stock, String imageUrl){
+    public chip(String name, String description, Double price, Integer stock, List<String> imageUrl){
         //TODO: Correct names
         this.name = name;
         //TODO: add description
@@ -40,7 +42,7 @@ public class chip{
         return this.stock;
 
     }
-    public String getImageUrl(){
+    public List<String> getImageUrl(){
         return this.imageUrl;
     }
 
@@ -59,7 +61,7 @@ public class chip{
     public void setStock(Integer stock){
         this.stock = stock;
     }
-    public void setImageUrl(String imageUrl){
+    public void setImageUrl(List<String> imageUrl){
         this.imageUrl = imageUrl;
     }
 
